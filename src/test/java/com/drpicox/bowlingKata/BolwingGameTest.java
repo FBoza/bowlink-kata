@@ -46,11 +46,15 @@ public class BolwingGameTest {
 
     @Test
     public void testOneStrike() throws Exception{
-        g.roll(10);
+        rollStrike();
         g.roll(3);
         g.roll(4);
         rollMany(16,0);
         assertThat(g.score(), is(24));
+    }
+
+    private void rollStrike() {
+        g.roll(10);
     }
 
     private void rollSpare(){
