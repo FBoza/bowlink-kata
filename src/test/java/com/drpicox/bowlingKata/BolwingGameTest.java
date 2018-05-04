@@ -38,11 +38,15 @@ public class BolwingGameTest {
 
     @Test
     public void testOneSpace() throws Exception{
-        g.roll(5);
-        g.roll(5);  //spare, tira els 10 en dos intents
+        rollSpare();
         g.roll(3);
         rollMany(17,0);
         assertThat(g.score(),is(16));
+    }
+
+    private void rollSpare(){
+        g.roll(5);
+        g.roll(5);
     }
 
 }
