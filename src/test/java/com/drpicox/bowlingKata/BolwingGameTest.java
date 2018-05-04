@@ -18,6 +18,12 @@ public class BolwingGameTest {
         g = new Game();
     }
 
+    private void rollMany(int n, int pins) {
+        for(int i = 0;  i < n; i++){
+            g.roll(pins);
+        }
+    }
+
     @Test
     public void gutterGame(){
         rollMany(20, 0);
@@ -28,12 +34,6 @@ public class BolwingGameTest {
     public void testAllOnce() throws Exception{
         rollMany(20, 0);
         assertThat(g.score(), is(20));
-    }
-
-    private void rollMany(int n, int pins) {
-        for(int i = 0;  i < n; i++){
-            g.roll(pins);
-        }
     }
 
 }
