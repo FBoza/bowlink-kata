@@ -32,7 +32,7 @@ public class BolwingGameTest {
 
     @Test
     public void testAllOnce() throws Exception{
-        rollMany(20, 0);
+        rollMany(20, 1);
         assertThat(g.score(), is(20));
     }
 
