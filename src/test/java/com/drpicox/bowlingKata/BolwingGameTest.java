@@ -35,7 +35,7 @@ public class BolwingGameTest {
         rollMany(20, 1);
         assertThat(g.score(), is(20));
     }
-/*
+
     @Test
     public void testOneSpace() throws Exception{
         g.roll(5);
@@ -44,5 +44,5 @@ public class BolwingGameTest {
         rollMany(17,0);
         assertThat(g.score(),is(16));
     }
-*/
+
 }
