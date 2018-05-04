@@ -20,17 +20,13 @@ public class BolwingGameTest {
 
     @Test
     public void gutterGame(){
-        int n = 20;
-        int pins = 0;
-        rollMany(n, pins);
+        rollMany(20, 0);
         assertThat(g.score(), is(0));
     }
 
     @Test
     public void testAllOnce() throws Exception{
-        int n = 20;
-        int pins = 1;
-        rollMany(n, pins);
+        rollMany(20, 0);
         assertThat(g.score(), is(20));
     }
 
